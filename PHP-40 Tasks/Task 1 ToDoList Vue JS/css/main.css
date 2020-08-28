@@ -1,0 +1,83 @@
+*{
+    font-family: arial;
+}
+
+main{
+    background-image: linear-gradient(#d3b7af,#58b4ae);
+    min-height: 100vh;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.h3-back{
+    background-color: #A9A9A9;
+    border-bottom: 5px solid #800000;
+    color: #800000;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 50px 0;
+    border-radius: 20px;
+}
+
+.h3-back h3{
+    font-family: arial;
+    font-size: 72px;
+}
+
+form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+form label{
+ color: #800000 !important;
+}
+
+form #newTodo{
+    flex-basis: 60%;
+}
+
+button{
+    padding: 8px 20px;
+    background-color: #800000;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+}
+
+form label{
+    text-decoration: underline;
+    font-size: 22px;
+    color: #2a81ea;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+ul span{
+    margin: 0 10px;
+    text-transform: capitalize;
+}
+

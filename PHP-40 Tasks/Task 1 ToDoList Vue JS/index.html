@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main id="app">
+     <div class="container">
+        <div class="h3-back">
+         <h3>{{title}}</h3>   
+        </div>
+          <form @submit.prevent="addTodo">
+            <label for="newTodo">New Todo:</label>
+            <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="">
+            <button type="submit" name="button">Add</button>
+          </form>
+          
+          <ul>
+            <li v-for="todo in todos">
+              <input type="checkbox" v-model="todo.done">
+              <span :class="{ done: todo.done }">{{todo.title}}</span>
+              <button @click="removeTodo(todo)" type="button" name="button">Remove</button>
+            </li>
+          </ul>
+          <button @click="allDone" type="button" name="button">All Done</button>
+     </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
